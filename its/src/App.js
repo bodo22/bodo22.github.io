@@ -40,7 +40,14 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} centered>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          centered
+          allowScrollButtonsMobile
+          scrollButtons="auto"
+          variant="scrollable"
+        >
           {Object.keys(tabs).map((tab) => {
             return <Tab label={tab} key={tab} />;
           })}
